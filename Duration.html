@@ -1,0 +1,261 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Duration</title>
+    <link rel="icon" href="img/flo-h.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style30.1.css">
+
+     <!--- box icons link  --->
+     <link rel="stylesheet"
+     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+     <!--- remix icons link  --->
+     <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+
+    <!--- google font link  --->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+
+    <!--- header  --->
+    <header>
+        <a href="index30.html" class="logo">
+            <img src="img/logo.png">
+        </a>
+
+        <ul class="navlist">
+            <li><a href="Duration.html">Duration</a></li>
+            <li><a href="Note.html">Note</a></li>
+            <li><a href="Valentine.html">Valentine</a></li>
+            <li><a href="Flowers.html">Flowers</a></li>
+        </ul>
+
+        <div class="right-content">
+            <a href="https://discord.com/channels/@me/979934417764098128" class="nav-btn">Call</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+
+        </div>
+    </header>
+
+
+
+
+ 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversary Count-Up</title>
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        /* Base styling */
+        body {
+            font-family: "Marck Script", serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+            color: #ffffff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Floating bubble particles */
+        .bubble {
+            position: absolute;
+            bottom: 0%; /* Start slightly off-screen */
+            width: 15px;
+            height: 15px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: float 8s linear infinite;
+            pointer-events: none;
+        }
+
+        /* Generate random positions and sizes for more bubbles */
+        .bubble:nth-child(1) { right: 5%; animation-duration: 8s; width: 12px; height: 12px; }
+        .bubble:nth-child(2) { right: 15%; animation-duration: 10s; width: 18px; height: 18px; }
+        .bubble:nth-child(3) { right: 25%; animation-duration: 12s; width: 25px; height: 25px; }
+        .bubble:nth-child(4) { right: 35%; animation-duration: 9s; width: 20px; height: 20px; }
+        .bubble:nth-child(5) { right: 45%; animation-duration: 11s; width: 15px; height: 15px; }
+        .bubble:nth-child(6) { right: 55%; animation-duration: 7s; width: 10px; height: 10px; }
+        .bubble:nth-child(7) { right: 65%; animation-duration: 8s; width: 18px; height: 18px; }
+        .bubble:nth-child(8) { right: 75%; animation-duration: 14s; width: 22px; height: 22px; }
+        .bubble:nth-child(9) { right: 85%; animation-duration: 6s; width: 12px; height: 12px; }
+        .bubble:nth-child(10) { right: 95%; animation-duration: 13s; width: 30px; height: 30px; }
+        .bubble:nth-child(11) { left: 5%; animation-duration: 8s; width: 12px; height: 12px; }
+        .bubble:nth-child(12) { left: 15%; animation-duration: 10s; width: 18px; height: 18px; }
+        .bubble:nth-child(13) { left: 25%; animation-duration: 12s; width: 25px; height: 25px; }
+        .bubble:nth-child(14) { left: 35%; animation-duration: 9s; width: 20px; height: 20px; }
+        .bubble:nth-child(15) { left: 45%; animation-duration: 11s; width: 15px; height: 15px; }
+        .bubble:nth-child(16) { left: 55%; animation-duration: 7s; width: 10px; height: 10px; }
+        .bubble:nth-child(17) { left: 65%; animation-duration: 8s; width: 18px; height: 18px; }
+        .bubble:nth-child(18) { left: 75%; animation-duration: 14s; width: 22px; height: 22px; }
+        .bubble:nth-child(19) { left: 85%; animation-duration: 6s; width: 12px; height: 12px; }
+        .bubble:nth-child(20) { left: 95%; animation-duration: 13s; width: 30px; height: 30px; }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-50vh) translateX(10px); /* Add a slight horizontal drift */
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(-10px);
+                opacity: 0;
+            }
+        }
+
+        /* Count-up container */
+        .count-up {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            padding: 40px 50px;
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            border: 2px solid #ff8c94;
+            transition: all 0.5s ease;
+            z-index: 10; /* Ensures it's above bubbles */
+        }
+
+        .count-up:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .count-up .heart {
+            font-size: 60px;
+            color: #ff6b6b;
+            animation: pulse 1.5s infinite;
+            margin-bottom: 20px;
+        }
+
+        .count-up h1 {
+            font-size: 40px;
+            margin: 0;
+            color: #ff4e50;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .count-up p {
+            font-size: 22px;
+            margin-top: 15px;
+            line-height: 1.6;
+            color: #4a0000;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    
+    </style>
+</head>
+<body>
+    <!-- Floating Bubbles -->
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
+
+    <!-- Count-Up Section -->
+    <div class="count-up" data-aos="zoom-in" data-aos-duration="1400">
+        <div class="heart">❤️</div>
+        <h1>Happy Anniversary!</h1>
+        <p id="time"></p>
+    </div>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Anniversary Count-Up Logic
+        const startDate = new Date("2024-02-12"); // Set your anniversary date
+
+        function updateAnniversary() {
+            const now = new Date();
+            const diff = now - startDate;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const years = Math.floor(days / 365);
+            const months = Math.floor((days % 365) / 30);
+
+            document.getElementById("time").innerText = 
+                `We’ve been together for ${years} years, ${months} months, and ${days} days.`;
+        }
+
+        setInterval(updateAnniversary, 1000);
+        updateAnniversary();
+    </script>
+
+<!--- js link  --->
+    <script src="script30.js"></script>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset:1,
+      });
+    </script>
+
+
+</body>
+</html>

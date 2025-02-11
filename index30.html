@@ -1,0 +1,108 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Present</title>
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style30.css">
+
+     <!--- box icons link  --->
+     <link rel="stylesheet"
+     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+     <!--- remix icons link  --->
+     <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+
+    <!--- google font link  --->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+
+    <!--- loader --->
+
+       <div class="loader">
+        <div></div>
+        <div></div>
+       </div>
+
+       <script>
+        $(window).load(function () {
+        setTimeout(function(){
+            $('#preloader').fadeOut('slow', function () {
+            });
+        },4000); // set the time here
+    });  
+       </script>
+
+    <!--- header  --->
+    <header>
+        <a href="index30.html" class="logo">
+            <img src="img/logo.png">
+        </a>
+
+        <ul class="navlist">
+            <li><a href="Duration.html">Duration</a></li>
+            <li><a href="Note.html">Note</a></li>
+            <li><a href="Valentine.html">Valentine</a></li>
+            <li><a href="Flowers.html">Flowers</a></li>
+        </ul>
+
+        <div class="right-content">
+            <a href="https://discord.com/channels/@me/979934417764098128" class="nav-btn">Call</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+
+        </div>
+        
+    </header>
+
+    <!--- hero  --->
+    <section class="hero">
+        <div class="hero-text">
+            <h5 data-aos="fade-right" data-aos-duration="1400"></h5>
+            <h1 data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">- Happy Aniversary.</h1>
+            <p data-aos="fade-right" data-aos-duration="1400" data-aos-delay="300">To the one who lights my world with just a glance,
+                The one whose presence feels like fate, not chance.
+                I annoy you, tease you, yet love you the same,
+                For in my heart, only your name remains.
+                
+                A year has passed, yet still, I crave,
+                Each laugh, each moment, the warmth you gave.
+                May your days be bright, your worries be few,
+                For my sun, my love, will always be you.
+                
+                Here’s to another year, to love and to fight,
+                To moments with you that feel endlessly right.</p>
+        </div>
+
+        <div class="hero-img" data-aos="zoom-in" data-aos-duration="1400">
+            <img src="img/hero.png"
+        </div>
+    </section>
+
+    <div class="sender" data-aos="zoom-out-down" data-aos-duration="1400" data-aos-delay="550">
+        <a href="#">
+            <i class='bx bx-heart' ></i>
+            From Zaid(sazas) to My love Nancy(Sylvie)
+
+        </a>
+    </div>
+    
+    <!--- js link  --->
+    <script src="script30.js"></script>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset:1,
+      });
+    </script>
+
+</body>
+</html>
